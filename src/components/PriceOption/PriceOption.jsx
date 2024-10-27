@@ -4,7 +4,7 @@ import Feature from "../Feature/Feature";
 const PriceOption = ({ option }) => {
   const { name, price, features } = option;
   return (
-    <div className="bg-blue-500 rounded-md p-4 flex-col text-white">
+    <div className="bg-blue-500 rounded-md p-4 flex flex-col text-white">
       <h2 className="text-center">
         <span className="text-7xl font-extrabold">{price}</span>
         <span className="text-2xl">/mon</span>
