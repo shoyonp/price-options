@@ -14,7 +14,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav>
+    <nav className="text-black p-6 bg-white">
       <div className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
         {open == true ? (
           <FcCloseUpMode></FcCloseUpMode>
@@ -22,7 +22,9 @@ const NavBar = () => {
           <BsMenuButtonWide className="text-xl "></BsMenuButtonWide>
         )}
       </div>
-      <ul className="md:flex ">
+      <ul className={`md:flex duration-1000 absolute md:static
+        ${open ? 'top-12' : '-top-60'}
+        bg-purple-600 text-white px-6`}>
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
